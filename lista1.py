@@ -246,7 +246,7 @@ def calcular_prestacao_atrasada(valor_prestacao, taxa_juros, periodo_atraso):
 
     return prestacao_atrasada, juros
 
- Entrada do usuário para o valor da prestação, taxa de juros e período de atraso
+ 
 valor_prestacao = float(input("Digite o valor da prestação vencida: "))
 taxa_juros = float(input("Digite a taxa periódica de juros (em porcentagem): "))
 periodo_atraso = int(input("Digite o período de atraso em meses: "))
