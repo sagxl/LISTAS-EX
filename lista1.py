@@ -271,4 +271,4 @@ print(f'a valor em dolar sera {conversao} ')
 
 
 
-# def q10():
+# def q10():z
