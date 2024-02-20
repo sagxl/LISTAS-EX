@@ -14,6 +14,7 @@ def q01():
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
 def q02():
+
     num1 = int(input('digite o primeiro numero '))
     num2 = int(input('digite o segundo numero '))
 
@@ -28,46 +29,147 @@ def q02():
 def q03():
     n = int(input('digite um numero '))
 
+
     if n % 3 :
         print('e divisivel ')
     else:
         print('nao e divisivel')
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+def q04():
+
+    numero = int(input('digite um numero'))
+
+    if numero % 5 == 0:
+        print(f'{numero }nao divisivel por 5')
+    else:
+        print(f'{numero}  e divisivel por 5 ')
 
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+def q05():
+
+    numero = int(input('digite um numero'))
+
+    if numero % 7 == 0 and numero % 3 == 0:
+        print(f'{numero } e divisivel por 7 ou 3 ')
+    else:
+        print(f'{numero}  nao e divisivel por 7 ou 3 ')
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
+def q06():
+
+
+    salario_bruto = float(input('digite o valor salarial'))
+    prestacao = float(input('digite a prestacao '))
+
+    limite_prestacao = salario_bruto * 0.3
+
+    if prestacao <= limite_prestacao:
+        print('emprestimo concedido') 
+    else:
+        print('emprestimo nao concedido')
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
+def q07():
+
+    numero = int (input('digite um numero '))
+
+    if numero >= 20 and numero <= 50:
+        print(f'{numero } esta compreendido')
+    else:
+        print (f'{numero} nao e ta compeendido')     
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
-#   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+  # "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+def q08():
+
+    n1 = int(input('digite um numero: '))
+
+    if n1 > 20:
+        print(f'{n1} maior do que 20 ')
+    elif n1 == 20:
+        print(f'{n1} igual a 20')
+    else:
+        print(f'{n1} menor doque 20')
+
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+def q09():
+
+
+    ano_nascimento = int(input('digite o ano de nascimento'))
+    ano_atual = int(input('digite o ano atual'))
+
+
+    idade = ano_atual-ano_nascimento 
+
+    if ano_nascimento >= 2024:
+        print(f'a idade e -> {idade } e esta valida')
+    else:
+        print(f'a idade e -> {idade} e nao e valida')
+
+
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
+def q10():
+
+
+    n1 = int(input('digite uma numero '))
+    n2 = int(input('digite uma numero '))
+    n3 = int(input('digite uma numero '))
+
+    #umeros = [n1,n2,n3]
+    numeros_ordeneados = sorted(numeros)
+
+    print('numeros ordenados ',numeros_ordeneados)
+
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+def q11():
+
+    n1 = int(input('digite uma numero '))
+    n2 = int(input('digite uma numero '))
+    n3 = int(input('digite uma numero '))
+
+    numeros = [n1,n2,n3]
+    maior_numero = max(numeros)
+
+    print('O maior numero e  ',maior_numero)
+
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
 #• Se é menor de idadea
 #• Se é maior de 65 anos
+def q12():
+
+    idade = int(input('digite a idade '))
+
+
+    if idade >= 65:
+    print(f'{idade} maior que 65')
+    elif idade >=18  :
+    print(f'{idade} de maior ')
+    elif idade <= 18 :
+    print(f'{idade} de menor')
+
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+
+
+
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
@@ -168,3 +270,5 @@ def q03():
   #sair do progama = quit()                #python3 -i lista2.py
 
 
+
+q08():
