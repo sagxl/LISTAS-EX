@@ -103,7 +103,7 @@
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
 #def q09():
-
+ano_nascimento = int(input('digite a data de nascimento'))
 
  #   ano_nascimento = int(input('digite o ano de nascimento'))
   #  ano_atual = int(input('digite o ano atual'))
@@ -121,6 +121,7 @@
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
 #def q10():
+#outro exemplo 
 
 
  #   n1 = int(input('digite uma numero '))
@@ -322,7 +323,41 @@
 #• Ler os pontos obtidos por cada jogador da equipe;
 #• Mostrar esses valores em ordem decrescente;
 #• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles,
-#  caso contrário, imprimir a mensagem "Equipe desclassificada".
+#  caso contrário, imprimir a mensagem "Equipe desclassificada"
+
+
+#ponto_j1 = int(input('informe os pontos obtidos do joagador 1 '))
+#ponto_j2 = int(input('informe os pontos obtidos do joagador 2 '))
+#ponto_j3 = int(input('informe os pontos obtidos do joagador 3 '))
+
+
+#soma_pontos = ponto_j1 + ponto_j2 + ponto_j3
+
+
+#if(ponto_j3 > ponto_j2):
+#        aux = ponto_j3
+#        ponto_j3 = ponto_j2
+#        ponto_j2 = aux
+
+#if(ponto_j2 > ponto_j1):
+#        aux = ponto_j2
+#        ponto_j2 = ponto_j1
+#        ponto_j1 = aux
+
+#if(ponto_j3 > ponto_j2):
+#        aux = ponto_j3
+#        ponto_j3 = ponto_j2
+#        ponto_j2 = aux
+
+#print('pontos em ordem decrescente',ponto_j1,'-',ponto_j2,'-',ponto_j3)        
+
+
+#if soma_pontos > 100:
+#    media = soma_pontos/3 
+#    print(f'equipe classificada, media de pontos {media}')
+#else:
+#    print ('equipe desclassificada ')
+
 #---------------------------------------------------------------------------------------------------------------
 
 #20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de
@@ -340,9 +375,9 @@
 
 
 #if saldo_medio >= 0 and saldo_medio <= 500:
-#    percentual_credito = 0
+ #   percentual_credito = 0
 #elif saldo_medio <= 1000:
-#    percentual_credito = 0.3
+  #  percentual_credito = 0.3
 #elif saldo_medio <= 3000:
  #   percentual_credito = 0.4
 #else:
@@ -353,6 +388,7 @@
 
 #print(f"Saldo Médio: R$ {saldo_medio:.2f}")
 #print(f"Valor do Crédito: R$ {valor_credito:.2f}")
+
 
 #21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do
 #livro que será emprestado, o tipo de usuário (professor ou aluno) e possa
@@ -366,11 +402,11 @@
 #tipo_usuario = input("Digite o tipo de usuário (professor ou aluno): ")
 
 #if tipo_usuario.lower() == "professor":
- #   total_dias = 10
+ #  total_dias = 10
 #elif tipo_usuario.lower() == "aluno":
  #   total_dias = 3
 #else:
-#    total_dias = 0 
+ #   total_dias = 0 
 
 #print("\nRecibo:")
 #print(f"Nome do livro: {nome_livro}")
@@ -390,6 +426,7 @@
 #consumo_carro_B = 9   
 #consumo_carro_C = 8   
 
+#if tipo
 #if tipo_carro.upper() == "A":
 #    consumo_estimado = percurso_km / consumo_carro_A
 #elif tipo_carro.upper() == "B":
@@ -419,26 +456,11 @@
 #bebida = input("Escolha a bebida (Chá, Suco de laranja, Suco de melão, Refrigerante diet): ")
 
 
-#calorias_prato = {
-    #"Vegetariano": 180,
-    #"Peixe": 230,
-    #"Frango": 250,
-    #"Carne": 350
-#}
+#calorias_prato = {"vegetariano": 180,"peixe": 230,"frango": 250,"carne": 350 }
+#calorias_sobremesa = { "abacaxi": 75, "sorvete diet": 110,"mousse diet": 170, "mousse chocolate": 200 }
+#calorias_bebida = { "cha": 20, "suco de laranja": 70,"suco de melão": 100, "refrigerante diet": 65 }
+    
 
-#calorias_sobremesa = {
-    #"Abacaxi": 75,
-    #"Sorvete diet": 110,
-    #"Mousse diet": 170,
-    #"Mousse chocolate": 200
-#}
-
-#calorias_bebida = {
-    #"Chá": 20,
-    #"Suco de laranja": 70,
-    #"Suco de melão": 100,
-    #"Refrigerante diet": 65
-#}
 
 #if prato in calorias_prato and sobremesa in calorias_sobremesa and bebida in calorias_bebida:
    
@@ -454,6 +476,15 @@
 #faça um programa que, a partir da leitura da placa do carro, informe o mês
 #em que o emplacamento deve ser renovado.
 
+placa = input('placa do veiculo')
+mes = placa[len(placa)-1]
+
+if mes
+
+
+
+
+
 #25. A prefeitura contratou uma firma especializada para manter os níveis de
 #poluição considerados ideais para um país do 1º mundo. As indústrias,
 #maiores responsáveis pela poluição, foram classificadas em três grupos.
@@ -464,6 +495,15 @@
 #0,3 1º grupo
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
   #sair do progama = quit()                #python3 -i lista2.py
 
 
