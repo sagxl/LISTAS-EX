@@ -48,28 +48,55 @@ def q05():
 
     for _ in range(num2):
         resultado += num1
-
-    return resultado
+        return resultado
 
     num1 = int(input("Digite o primeiro número inteiro positivo: "))
     num2 = int(input("Digite o segundo número inteiro positivo: "))
 
     if num1 < 0 or num2 < 0:
-    print("Por favor, digite números inteiros positivos.")
+        print("Por favor, digite números inteiros positivos.")
     else:
-    resultado = produto_por_somas(num1, num2)
-    print(f"O produto de {num1} e {num2} é: {resultado}")
+        resultado = produto_por_somas(num1, num2)
+        print(f"O produto de {num1} e {num2} é: {resultado}")
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
 #a partir da soma dos anteriores. Exemplo:
 #• 1 + 1 = 2, terceiro termo;
 #• 1 + 2 = 3, quarto termo, etc.
+def q06():
+    for i in range(4):
+         n = int(input('que termo deseja encontrar'))
+         ultimo = 1
+         penultimo = 1
+
+         if (n == 1) or (n == 2):
+            print('1')
+         else:
+            for count in range(4,n):
+                termo = ultimo + penultimo
+                penultimo = ultimo
+                ultimo = termo
+                count += 1
+                print(termo)
+
+        
 
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
+def q07():
 
+    for i in range(4):
+        nome = input('qual e seu nome0: ')
+        nota1 = int(input('digite a primeira nota: '))
+        nota2 = int(input('digite a segunda nota:'))
+
+        nota_final = nota1 + nota2 / 2
+    
+    
+ 
+    print(f'a nota final sera {nota_final}')
 #8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
 #calculado conforme a tabela a seguir:
@@ -78,15 +105,32 @@ def q05():
 #Salário maior ou igual a R$1300,00 e menor que R$2300,00 10% do salário bruto
 #Salário maior ou igual a R$2300,00 15% do salário bruto
 
+
+
 #9. No dia da estréia do filme "Procurando Dory", uma grande emissora de TV realizou
 #uma pesquisa logo após o encerramento do filme. Cada espectador respondeu
 #a um questionário no qual constava sua idade e a sua opinião em relação ao filme:
 #excelente - 3; bom - 2; regular - 1. Criar um programa que receba a idade e a
-#opinião de 20 espectadores, calcule e imprima:
+#opinião de 20 espectadores,calcule  e imprima:
 #• A média das idades das pessoas que responderam excelente;
 #• A quantidade de pessoas que responderam regular;
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
+def q09():
+    excelente = 0
+    bom = 0 
+    regular = 0
+
+
+    for i in range(5):
+        idade = int(input('qua a sua idade '))
+        opinião = int(input('escollha qual sua opiniao EXCELENTE ()/// REGULAR ()/// BOM () '))
+
+        
+
+
+
+
 
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
