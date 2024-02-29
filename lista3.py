@@ -1,83 +1,83 @@
 '''
-Lista de Exercícios referentes a estruturas de iteração (repetição)
-'''
-#1.Faça um programa que imprima todos os números de 1 até 100.
-def q01():
-    for i in range(101):
-        print(i)
+# Lista de Exercícios referentes a estruturas de iteração (repetição)
+# '''
+# #1.Faça um programa que imprima todos os números de 1 até 100.
+# def q01():
+#     for i in range(101):
+#         print(i)
 
-#2. Faça um programa que imprima todos os números pares de 100 até 1.
-def q02():
-    for i in  range(100,0,-2):
-        print(i)
+# #2. Faça um programa que imprima todos os números pares de 100 até 1.
+# def q02():
+#     for i in  range(100,0,-2):
+#         print(i)
     
-#3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
-def q03():
-    for i in range(500,0,-5):
-        print(i, end = " ")
+# #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
+# def q03():
+#     for i in range(500,0,-5):
+#         print(i, end = " ")
 
-#4. Faça umprograma que permita entrar com o nome, a idade e o sexo de 20
-#pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
-#e tiver mais de 21 anos.
-def q04():  
-    nomes = []
-    idades = []
-    sexos = []
-
-   
-    for i in range(20):
-        nome = input("Digite o nome da pessoa: ")
-        idade = int(input("Digite a idade de {} : ".format(nome)))
-        sexo = input("Digite o sexo de {} (M/F): ".format(nome)).upper()
-
-        nomes.append(nome)
-        idades.append(idade)
-        sexos.append(sexo)
+# #4. Faça umprograma que permita entrar com o nome, a idade e o sexo de 20
+# #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
+# #e tiver mais de 21 anos.
+# def q04():  
+#     nomes = []
+#     idades = []
+#     sexos = []
 
    
-    print("\nPessoas do sexo masculino com mais de 21 anos:")
-    for i in range(20):
-        if sexos[i] == "M" and idades[i] > 21:
-            print(nomes[i])
+#     for i in range(20):
+#         nome = input("Digite o nome da pessoa: ")
+#         idade = int(input("Digite a idade de {} : ".format(nome)))
+#         sexo = input("Digite o sexo de {} (M/F): ".format(nome)).upper()
 
-#5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
-#sucessivas, crie um programa que calcule o produto de dois números inteiros
-#lidos. Suponha que os números lidos sejam positivos.
-def q05():
-    resultado = 0
+#         nomes.append(nome)
+#         idades.append(idade)
+#         sexos.append(sexo)
 
-    for _ in range(num2):
-        resultado += num1
-        return resultado
+   
+#     print("\nPessoas do sexo masculino com mais de 21 anos:")
+#     for i in range(20):
+#         if sexos[i] == "M" and idades[i] > 21:
+#             print(nomes[i])
 
-    num1 = int(input("Digite o primeiro número inteiro positivo: "))
-    num2 = int(input("Digite o segundo número inteiro positivo: "))
+# #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
+# #sucessivas, crie um programa que calcule o produto de dois números inteiros
+# #lidos. Suponha que os números lidos sejam positivos.
+# def q05():
+#     resultado = 0
 
-    if num1 < 0 or num2 < 0:
-        print("Por favor, digite números inteiros positivos.")
-    else:
-        resultado = produto_por_somas(num1, num2)
-        print(f"O produto de {num1} e {num2} é: {resultado}")
-#6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
-#Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
-#a partir da soma dos anteriores. Exemplo:
-#• 1 + 1 = 2, terceiro termo;
-#• 1 + 2 = 3, quarto termo, etc.
-def q06():
-    for i in range(4):
-         n = int(input('que termo deseja encontrar'))
-         ultimo = 1
-         penultimo = 1
+#     for _ in range(num2):
+#         resultado += num1
+#         return resultado
 
-         if (n == 1) or (n == 2):
-            print('1')
-         else:
-            for count in range(4,n):
-                termo = ultimo + penultimo
-                penultimo = ultimo
-                ultimo = termo
-                count += 1
-                print(termo)
+#       num1 = int(input("Digite o primeiro número inteiro positivo: "))
+#       num2 = int(input("Digite o segundo número inteiro positivo: "))
+
+#         if num1 < 0 or num2 < 0:
+#         print("Por favor, digite números inteiros positivos.")
+#         else:
+#         resultado = produto_por_somas(num1, num2)
+#         print(f"O produto de {num1} e {num2} é: {resultado}")
+# #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
+# #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
+# #a partir da soma dos anteriores. Exemplo:
+# #• 1 + 1 = 2, terceiro termo;
+# #• 1 + 2 = 3, quarto termo, etc.
+# def q06():
+#     for i in range(4):
+#          n = int(input('que termo deseja encontrar'))
+#          ultimo = 1
+#          penultimo = 1
+
+#          if (n == 1) or (n == 2):
+#             print('1')
+#          else:
+#             for count in range(4,n):
+#                 termo = ultimo + penultimo
+#                 penultimo = ultimo
+#                 ultimo = termo
+#                 count += 1
+#                 print(termo)
 
         
 
@@ -85,18 +85,17 @@ def q06():
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
-def q07():
+#def q07():
+for i in range(4):
+    nome = input('qual e seu nome: ')
+    nota1 = int(input('digite a primeira nota: '))
+    nota2 = int(input('digite a segunda nota:'))
 
-    for i in range(4):
-        nome = input('qual e seu nome0: ')
-        nota1 = int(input('digite a primeira nota: '))
-        nota2 = int(input('digite a segunda nota:'))
+    media = nota1 + nota2 / 2
 
-        nota_final = nota1 + nota2 / 2
-    
-    
- 
-    print(f'a nota final sera {nota_final}')
+    print(f'o aluno{nome} com a {nota1} e {nota2} tem a media de {media}')
+
+   
 #8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
 #calculado conforme a tabela a seguir:
@@ -116,17 +115,9 @@ def q07():
 #• A quantidade de pessoas que responderam regular;
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
-def q09():
-    excelente = 0
-    bom = 0 
-    regular = 0
 
 
-    for i in range(5):
-        idade = int(input('qua a sua idade '))
-        opinião = int(input('escollha qual sua opiniao EXCELENTE ()/// REGULAR ()/// BOM () '))
 
-        
 
 
 
@@ -171,6 +162,7 @@ def q09():
 #imprima:
 #• total de pessoas com menos de 21 anos
 #• total de pessoas com mais de 50 anos
+
 
 #16. Sabendo-se que a unidade lógica e aritmética calcula a divisão por meio de subtrações
 #sucessivas, criar um algoritmo que calcule e imprima o resto da divisão de
