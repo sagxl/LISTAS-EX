@@ -1,2 +1,2 @@
 # LISTAS-EX
-listas de exercícios em python do curdo rede de computadores 
+listas de exercícios em python do curso rede de computadores 
