@@ -179,7 +179,7 @@ def q10():
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
 def q11():
-    contagem_numeros = 0
+    contagem_numeros = 5
     while True:
         numero = float(input("Digite um número (ou 0 para encerrar): "))
         if 100 <= numero <= 200:
@@ -222,16 +222,100 @@ def q12():
 #• O custo total para cada consumidor
 #• O total de consumo para os três tipos de consumidor
 #• Amédia de consumo dos tipos 1 e 2
+def q13():
+    total_consumo_residencial = 0
+    total_consumo_industrial = 0
+    total_consumo_comercial = 0
+    total_custo = 0
+    consumo_tipos_1_e_2 = 0
+
+    while True:
+        num_consumidor = int(input('qual o numero do consumidor (para encerrar o progama digite 0)'))
+
+        if num_consumidor == 0 :
+            break
+        
+        consumo_kwh = float(input('digite o consumo gastos em kwh '))
+        tipo_consumidor = int(input("escolha o tipo de consumidor (1-residencial, 2-comercial, 3-industrial): "))
+    
+        if tipo_consumidor == 1 or tipo_consumidor == 2:
+            consumo_tipos_1_e_2 += 1
+    
+        if tipo_consumidor == 1:
+            preco_kwh = 0.3
+            total_consumo_residencial += consumo_kwh
+        elif tipo_consumidor == 2:
+            preco_kwh = 0.5
+            total_consumo_comercial += consumo_kwh
+        elif tipo_consumidor == 3:
+            preco_kwh = 0.7
+            total_consumo_industrial += consumo_kwh
+        else:
+            print("Tipo de consumidor inválido. tente novamente.")
+
+
+        custo_consumidor = preco_kwh * consumo_kwh
+        total_custo += custo_consumidor 
+
+    if consumo_tipos_1_e_2 != 0:
+        media_consumo_tipos_1_e_2 = (total_consumo_comercial + total_consumo_residencial) / consumo_tipos_1_e_2
+    else:
+        media_consumo_tipos_1_e_2 = 0 
+
+    print(f'\n O custo total de cada consumidor e : R$ {total_custo}')    
+    print(f' o total de consumo residencial :{total_consumo_residencial} KWH')
+    print(f' o total de consumo residencial :{total_consumo_comercial} KWH')
+    print(f' o total de consumo residencial :{total_consumo_industrial} KWH')
+    print(f"Média de consumo dos tipos 1 e 2: {media_consumo_tipos_1_e_2:.2f} kWh")
 
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
+def q14():
+    n = int(input("Digite um, numero:"))
+
+    for i in range(1,n):
+        resultado = (i*n)
+        n = resultado
+        
+    print (resultado)
+
 
 #15. Faça um programa que permita entrar com a idade de várias pessoas e
 #imprima:
 #• total de pessoas com menos de 21 anos
 #• total de pessoas com mais de 50 anos
+def q15():
+    pessoas_com_21 = 0 
+    pessoas_com_50 = 0
 
-#16. Sabendo-se que a unidade lógica e aritmética calcula a divisão por meio de subtrações
+ 
+        
+    while True:
+        idade = int(input('digite a sua idade '))
+        if idade < 1:
+            break
+
+        if idade < 21:
+            pessoas_com_21 += 1
+        elif idade > 50:
+            pessoas_com_50 += 1
+            
+        print(f'pessao co mais de 50 anos sao : {pessoas_com_21}')
+        print(f'pessoas com 21 anos sao : {pessoas_com_50}')       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #sucessivas, criar um algoritmo que calcule e imprima o resto da divisão de
 #números inteiros lidos. Para isso, basta subtrair o divisor ao dividendo, sucessivamente,
 #até que o resultado seja menor do que o divisor. O número de subtrações
