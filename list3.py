@@ -304,18 +304,6 @@ def q15():
         print(f'pessoas com 21 anos sao : {pessoas_com_50}')       
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 #sucessivas, criar um algoritmo que calcule e imprima o resto da divisão de
 #números inteiros lidos. Para isso, basta subtrair o divisor ao dividendo, sucessivamente,
 #até que o resultado seja menor do que o divisor. O número de subtrações
@@ -328,6 +316,19 @@ def q15():
 #  5 é o Divisor
 #  2 é o Quociente (resultado inteiro da divisão)
 #  0 é o Resto da Divisão
+def q16():
+    num1 = int(input("Digite o primeiro numero: "))
+    num2 = int(input("Digite o segundo numero: "))
+
+    dividendo = num1
+    divisor = num2
+    quociente = dividendo/divisor
+    resto = dividendo%divisor
+
+    print("O dividendo é: ", dividendo)
+    print("O divisor é: ", divisor)
+    print("O quociente é: ", quociente)
+    print("E o resto é: ", resto)
 
 #17. Crie um programa que possa ler um conjunto de pedidos de compra e
 #calcule o valor total da compra. Cada pedido é composto pelos seguintes campos:
@@ -338,6 +339,8 @@ def q15():
 #• quantidade
 #O programa deverá processar novos pedidos até que o usuário digite 0 (zero)
 #como número do pedido.
+def q17():
+    
 
 #18. Uma pousada estipulou o preço para a diária em R$30,00 e mais uma taxa de
 #serviços diários de:
