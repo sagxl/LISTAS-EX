@@ -159,19 +159,50 @@ def q09():
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
 def q10():
-    n_pais = 2
-    n_jogadores_por_time = 2
+    num_paises = 30
+    num_jogadores_por_time = 2
 
-    for i in range(1, n_pais + 1):
-        n_pais = input(f"Digite o nome do país {i}: ")
-        jogadores = []
+    for pais in range(1, num_paises + 1):
+        print(f"\nPaís {pais}:")
 
-        for j in range(1, n_jogadores_por_time + 1):
-            nome_jogador = input(f"Digite o nome do jogador {j} de {n_pais}: ")
-            peso_jogador = float(input(f"Digite o peso do jogador {j} em kg: "))
-            idade_jogador = int(input(f"Digite a idade do jogador {j} em anos: "))
-            
-            print({"nome do jogador": nome_jogador, "peso do jogador": peso_jogador, "idade": idade_jogador})
+        peso_total_time = 0
+        idade_total_time = 0
+        peso_mais_pesado = 0
+        atleta_mais_pesado = ""
+        idade_mais_jovem = float('inf')
+        atleta_mais_jovem = ""
+        for jogador in range(1, num_jogadores_por_time + 1):
+            peso = float(input(f"Informe o peso do jogador {jogador} (em kg): "))
+            idade = int(input(f"Informe a idade do jogador {jogador}: "))
+
+        peso_total_time += peso
+        idade_total_time += idade
+
+        if peso > peso_mais_pesado:
+            peso_mais_pesado = peso
+            atleta_mais_pesado = f"Jogador {jogador}"
+
+        if idade < idade_mais_jovem:
+            idade_mais_jovem = idade
+            atleta_mais_jovem = f"Jogador {jogador}"
+
+    peso_medio_time = peso_total_time / num_jogadores_por_time
+    idade_medio_time = idade_total_time / num_jogadores_por_time
+
+    print(f"Peso médio do time: {peso_medio_time:.2f} kg")
+    print(f"Idade média do time: {idade_medio_time:.2f} anos")
+    print(f"Atleta mais pesado: {atleta_mais_pesado} com {peso_mais_pesado} kg")
+    print(f"Atleta mais jovem: {atleta_mais_jovem} com {idade_mais_jovem} anos")
+
+    peso_total_geral = peso_total_time * num_paises
+    idade_total_geral = idade_total_time * num_paises
+
+    peso_medio_geral = peso_total_geral / (num_paises * num_jogadores_por_time)
+    idade_medio_geral = idade_total_geral / (num_paises * num_jogadores_por_time)
+
+    print("\nMédia geral de todos os participantes:")
+    print(f"Peso médio: {peso_medio_geral:.2f} kg")
+    print(f"Idade média: {idade_medio_geral:.2f} anos")
 
 
             
@@ -179,14 +210,18 @@ def q10():
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
 def q11():
-    contagem_numeros = 5
+    contagem_numeros_entre_100_200 = 0
+
     while True:
-        numero = float(input("Digite um número (ou 0 para encerrar): "))
-        if 100 <= numero <= 200:
-            contagem_numeros += 1
+        numero = int(input("Digite um número (ou 0 para sair): "))
+    
         if numero == 0:
-            break    
-            print(f"Quantidade de números entre 100 e 200: {contagem_numeros}")
+            break
+    
+        if 100 <= numero <= 200:
+            contagem_numeros_entre_100_200 += 1
+
+        print(f"\nQuantidade de números entre 100 e 200: {contagem_numeros_entre_100_200}")
 
     
 
@@ -329,7 +364,6 @@ def q16():
     print("O divisor é: ", divisor)
     print("O quociente é: ", quociente)
     print("E o resto é: ", resto)
-
 #17. Crie um programa que possa ler um conjunto de pedidos de compra e
 #calcule o valor total da compra. Cada pedido é composto pelos seguintes campos:
 #• número de pedido
@@ -340,7 +374,31 @@ def q16():
 #O programa deverá processar novos pedidos até que o usuário digite 0 (zero)
 #como número do pedido.
 def q17():
-    
+    pedidos = []
+
+    while True:
+        numero_pedido = input("Digite o número do pedido (ou 0 para sair): ")
+        if numero_pedido == '0':
+            break
+
+        data_pedido = input("Digite a data do pedido (dia/mês/ano): ")
+        preco_unitario = float(input("Digite o preço unitário: "))
+        quantidade = int(input("Digite a quantidade: "))
+
+        total_pedido = preco_unitario * quantidade
+
+        pedido = {
+            'numero_pedido': numero_pedido,
+            'data_pedido': data_pedido,
+            'preco_unitario': preco_unitario,
+            'quantidade': quantidade,
+            'total_pedido': total_pedido
+        }
+
+        pedidos.append(pedido)
+
+    valor_total = sum(pedido['total_pedido'] for pedido in pedidos)
+    print(f"O valor total da compra é: R${valor_total:.2f}")
 
 #18. Uma pousada estipulou o preço para a diária em R$30,00 e mais uma taxa de
 #serviços diários de:
@@ -348,8 +406,33 @@ def q17():
 #• R$8,00, se o número de dias for maior ou igual a 10;
 #Faça umprograma que imprima o nome, a conta e o número da conta de cada
 #cliente e ao final o total faturado pela pousada.
-#O programa deverá ler novos clientes até que o usuário digite 0 (zero) como
+#O programa deverá ler novos clientes até que o usuário di;gite 0 (zero) como
 #número da conta.
+def q18():
+    total_faturado = 0
+
+    while True:
+        nome_cliente = input("Digite o nome do cliente (ou 0 para sair): ")
+        if nome_cliente == '0':
+            break
+
+        numero_conta = input("Digite o número da conta: ")
+        numero_dias = int(input("Digite o número de dias de estadia: "))
+
+        preco_diaria = 30.00
+        taxa_servico = 15.00 
+        if numero_dias < 10:
+            15.00
+        else:
+            8.00
+        conta_cliente = numero_dias * preco_diaria + taxa_servico
+
+        total_faturado += conta_cliente
+
+        print(f"\nCliente: {nome_cliente}")
+        print(f"Número da conta: {numero_conta}")
+        print(f"Conta: R${conta_cliente:.2f}\n")
+        print(f"\nTotal faturado pela pousada: R${total_faturado:.2f}")
 
 #19. Emuma Universidade, os alunos das turmas de informática fizeram uma prova
 #de algoritmos. Cada turma possui um número de alunos. Criar um programa que
@@ -358,6 +441,35 @@ def q17():
 #• média de cada turma;
 #• percentual de reprovados.
 #Obs.: Considere aprovado comnota >= 7.0
+def q19():
+    total_alunos_aprovados = 0
+    total_turmas = int(input("Digite o número total de turmas: "))
+
+    for turma in range(1, total_turmas + 1):
+        total_alunos_turma = int(input(f"Digite o número de alunos da turma {turma}: "))
+        soma_notas = 0
+        alunos_aprovados_turma = 0
+        for aluno in range(1, total_alunos_turma + 1):
+            nota = float(input(f"Digite a nota do aluno {aluno} da turma {turma}: "))
+            soma_notas += nota
+            if nota >= 7.0:
+                alunos_aprovados_turma += 1
+
+    media_turma = soma_notas / total_alunos_turma
+    percentual_reprovados_turma = 100 - (alunos_aprovados_turma / total_alunos_turma) * 100
+
+    total_alunos_aprovados += alunos_aprovados_turma
+
+    print(f"\nTurma {turma}:")
+    print(f"Quantidade de alunos aprovados: {alunos_aprovados_turma}")
+    print(f"Média da turma: {media_turma:.2f}")
+    print(f"Percentual de reprovados: {percentual_reprovados_turma:.2f}%\n")
+
+    percentual_total_reprovados = 100 - (total_alunos_aprovados / (total_alunos_turma * total_turmas)) * 100
+
+    print(f"\nTotal de alunos aprovados em todas as turmas: {total_alunos_aprovados}")
+    print(f"Percentual total de reprovados: {percentual_total_reprovados:.2f}%")
+
 
 #20. Uma pesquisa de opinião realizada no Rio de Janeiro, teve as seguintes perguntas:
 #• Qual o seu time de coração?
@@ -490,5 +602,4 @@ def q17():
 #• amédia das idades das pessoas viúvas;
 #• a porcentagem de pessoas desquitadas ou separadas dentre todas as pessoas
 #analisadas.
-#Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a
-#idade.
+#Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a idade
