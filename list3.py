@@ -491,6 +491,80 @@ def q19():
 #• o número de pessoas de Niterói torcedoras do Fluminense
 #3.12. Exercícios da Aula 73
 #Obs.: O programa encerra quando se digita 0 para o time.
+def q20():
+    cont_fluminense = 0
+    cont_botafogo = 0
+    cont_flamengo = 0
+    cont_vasco = 0
+    outros_times = 0
+    botafogo_salario = 0
+    n_pess_rio = 0
+    n_pess_niteroi = 0
+
+    while True:
+        print(' Digite o número correspondente ao seu time de coração:')
+        print("1 - Fluminense")
+        print("2 - Botafogo")
+        print("3 - Vasco")
+        print("4 - Flamengo")
+        print("5 - Outros")
+        times = int(input('digite o nunero:'))
+        
+
+        if times == 0 :
+            break
+
+        if times == 1:
+            cont_fluminense += 1
+            localizacao = int(input("Você mora em qual cidade? (1 - RJ, 2 - Niterói, 3 - Outros): "))
+            if localizacao == 2:
+                n_pess_niteroi += 1 
+        elif times == 2:
+            cont_botafogo += 1
+            salario = float(input("Qual é o seu salário? "))
+            botafogo_salario += salario
+        elif times == 3:
+            cont_vasco += 1 
+            localizacao = int(input("Você mora em qual cidade? (1 - RJ, 2 - Niterói, 3 - Outros): "))
+            if localizacao == 1 and times != 3:
+                n_pess_rio +=  1
+        elif times == 4 :
+            cont_flamengo += 1
+            location_choice = int(input("Você mora em qual cidade? (1 - RJ, 2 - Niterói, 3 - Outros): "))
+            if localizacao == 1  and times != 4:
+                n_pess_rio += 1
+        else:
+            outros_times += 1 
+    print("Número de torcedores por clube:")
+    print(f"Fluminense:{cont_fluminense}")
+    print(f"Botafogo:{cont_vasco}")
+    print(f"Vasco:{cont_vasco}")
+    print(f"Flamengo:{cont_flamengo}")
+    print(f"Outros:{outros_times}")
+
+    if cont_botafogo > 0:
+        media_salarial = botafogo_salario / cont_botafogo
+        print(f'media salarial dos torcedores do botafogo e :{media_salarial}') 
+    else:
+        print('Não ha torcedores do Botafogo')
+
+
+    print(f'Número de pessoas moradoras do Rio de Janeiro, torcedores de outros clubes:{n_pess_rio}')
+    print(f'Número de pessoas de Niterói torcedoras do Fluminense:{n_pess_niteroi}')
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
 #21. Emuma universidade cada aluno possui os seguintes dados:
 #• Renda pessoal;
