@@ -299,9 +299,9 @@ def q13():
 
     print(f'\n O custo total de cada consumidor e : R$ {total_custo}')    
     print(f' o total de consumo residencial :{total_consumo_residencial} KWH')
-    print(f' o total de consumo residencial :{total_consumo_comercial} KWH')
-    print(f' o total de consumo residencial :{total_consumo_industrial} KWH')
-    print(f"Média de consumo dos tipos 1 e 2: {media_consumo_tipos_1_e_2:.2f} kWh")
+    print(f' o total de consumo comercial :{total_consumo_comercial} KWH')
+    print(f' o total de consumo indrustrial :{total_consumo_industrial} KWH')
+    print(f"Média de consumo dos tip os 1 e 2: {media_consumo_tipos_1_e_2:.2f} kWh")
 
 #14. Faça um programa que leia vários números inteiros e apresente o fatorial de cada
 #número. O algoritmo encerra quando se digita um número menor do que 1.n
@@ -552,20 +552,6 @@ def q20():
     print(f'Número de pessoas moradoras do Rio de Janeiro, torcedores de outros clubes:{n_pess_rio}')
     print(f'Número de pessoas de Niterói torcedoras do Fluminense:{n_pess_niteroi}')
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 #21. Emuma universidade cada aluno possui os seguintes dados:
 #• Renda pessoal;
 #• Renda familiar;
@@ -576,6 +562,45 @@ def q20():
 #que a renda familiar e a porcentagem gasta com alimentação e outras despesas
 #em relação às rendas pessoal e familiar.
 #Obs.: O programa encerra quando se digita 0 para a renda pessoal.
+def q21():
+    gastos_acima_200 = 0
+    alunos_renda_maior_fml = 0
+    total_alunos = 0
+
+    while True:
+        renda_pessoal = float(input('digite a sua renda pessoal:'))
+        
+        if renda_pessoal == 0:
+            break
+        
+        renda_familiar = float(input('qua a sua renda familiar:'))
+        custo_alimentação = float(input ('quanto foi o seu custo em alimentação:'))
+        custo_em_outras_dispesas = float(input('qual o foi o seu custo em outras dispesas: '))
+        total_alunos += 1
+
+        if gastos_acima_200 < 200:
+            gastos_acima_200 += 1
+
+        if renda_pessoal > renda_familiar:
+            alunos_renda_maior_fml += 1
+
+        custo_alimentação += 1
+        custo_em_outras_dispesas +=1
+
+
+    p_alunos_acima_200 = (gastos_acima_200/total_alunos) * 100
+    p_custo_alimentação = (custo_alimentação/total_alunos) * 100
+    p_custo_em_outras_dispesas = (custo_em_outras_dispesas/total_alunos) * 100
+    p_renda_maior_fml = (alunos_renda_maior_fml/total_alunos) * 100
+
+    print(f'A porcentagem de alunos que gasta acima de 200 R$ são {p_alunos_acima_200:.2f}%')
+    print(f'A porcentagem de alunos que gastam em alimentação são {p_custo_alimentação:.2f}%')
+    print(f'A porcentagem de alunos que gastam em outas dispesas são {p_custo_em_outras_dispesas:.2f}%')
+    print(f'A porcentagem com renda maior que a da familia são {p_renda_maior_fml:.2f}%')
+    
+    #precisa arrumar esse codigo 
+
+
 
 #22. Crie um programa que ajude o DETRAN a saber o total de recursos que foram
 #arrecadados com a aplicação de multas de trânsito.
