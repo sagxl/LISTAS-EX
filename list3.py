@@ -613,6 +613,32 @@ def q21():
 #imprimir tambémo número da carteira domotorista que obteve o maior número
 #de multas.
 #Obs.: O programa encerra ao ler a carteira de motorista de valor 0.
+ #  total_recursos = 0
+    #   maior_numero_multas = 0
+   #    carteira_maior_multas = None
+    
+     #  while True:
+         #  numero_carteira = int(input("Digite o número da carteira de motorista (ou 0 para encerrar): "))
+        #   if numero_carteira == 0:
+             #  break
+        
+         #  numero_multas = int(input("Digite o número de multas: "))
+        
+     #      if numero_multas > maior_numero_multas:
+ #              maior_numero_multas = numero_multas
+            #   carteira_maior_multas = numero_carteira
+        
+         #  valor_total_multas = 0
+         #  for i in range(numero_multas):
+             #  valor_multa = float(input(f"Digite o valor da multa {i+1}: "))
+             #  valor_total_multas += valor_multa
+        
+         #  total_recursos += valor_total_multas
+         #  print(f"O valor da dívida para o motorista da carteira {numero_carteira} é R${valor_total_multas:.2f}\n")
+    
+     #  print(f"Total de recursos arrecadados: R${total_recursos:.2f}")
+    #if carteira_maior_multas is not None:
+   #     print(f"O motorista com maior número de multas possui a carteira número {carteira_maior_multas}.")
 
 #23. Crie um programa que leia um conjunto de informações (nome, sexo, idade, peso
 #e altura) dos atletas que participaram de uma olimpíada, e informar:
