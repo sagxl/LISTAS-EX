@@ -679,6 +679,34 @@ def q23():
 #Deverá imprimir também o total de litros gastos na viagem. O programa encerra
 #quando o usuário informar umvalor negativo de velocidade.
 #74 Aula 3. Estruturas de Iteração
+def q24():
+    total_combustivel = 0
+    
+    while True :
+
+        velocidade = float(input("digite o valor da velocidade "))
+
+        if velocidade == 0:
+            break
+        
+        tempo = float(input("Informe o tempo de viagem neste trecho (horas): "))
+        
+        distancia = velocidade * tempo
+        combustivel_gasto = distancia / 10
+        
+        total_combustivel += combustivel_gasto
+        
+        print(f"Distância percorrida neste trecho: {distancia:.2f} km")
+        print(f"Combustível consumido neste trecho: {combustivel_gasto:.2f} litros")   
+    
+    print(f"Total de combustível consumido na viagem: {total_combustivel:.2f} litros")
+
+        
+
+
+
+
+
 
 #25. Faça umprograma que calcule o imposto de renda de umgrupo de contribuintes,
 #considerando que:
@@ -699,6 +727,43 @@ def q23():
 #g) ao final o programa deverá imprimir o total do imposto arrecadado pela
 #Receita Federal e o número de contribuintes isentos;
 #h) leve em consideração o fato de o primeiro CIC informado poder ser zero.
+def q25():
+    total_imposto = 0
+    total_isentos = 0
+
+    while True:
+        
+        cic = input("Informe o CIC do contribuinte (ou 0 para encerrar): ")
+        
+        
+        if cic == "0":
+            break
+        
+        dependentes = int(input("Informe o número de dependentes: "))
+        renda_bruta = float(input("Informe a renda bruta anual (R$): "))
+        
+       
+        abatimento = 600 * dependentes
+        renda_liquida = renda_bruta - abatimento
+        
+        
+        if renda_liquida <= 1000:
+            imposto = 0
+            total_isentos += 1
+        elif 1001 <= renda_liquida <= 5000:
+            imposto = renda_liquida * 0.15
+        else:
+            imposto = renda_liquida * 0.25
+        
+        
+        total_imposto += imposto
+        
+       
+        print(f"CIC: {cic}, Imposto a ser pago: R${imposto:.2f}")
+    
+    
+    print(f"Total de imposto arrecadado: R${total_imposto:.2f}")
+    print(f"Número de contribuintes isentos: {total_isentos}")
 
 #26. Foi feita uma pesquisa de audiência de canal de TV em várias casas de uma
 #certa cidade, em umdeterminado dia. Para cada casa visitada foram fornecidos o
@@ -709,6 +774,37 @@ def q23():
 #número de pessoas que estavam assistindo;
 #• Calcule e imprima a porcentagem de audiência em cada canal.
 #Obs.: Para encerrar a entrada de dados, digite o número do canal zero.
+def q26():
+    
+    audiencia = {4: 0, 5: 0, 7: 0, 12: 0}
+    total_pessoas = 0
+
+    while True:
+        
+        canal = int(input("Informe o número do canal (4, 5, 7, 12) ou 0 para encerrar: "))
+        
+        if canal == 0:
+            break
+        
+        if canal not in audiencia:
+            print("Canal inválido. Informe um dos seguintes canais: 4, 5, 7, 12.")
+            continue
+        
+        pessoas = int(input("Informe o número de pessoas assistindo: "))
+        
+        
+        audiencia[canal] += pessoas
+        total_pessoas += pessoas
+    
+    
+    if total_pessoas > 0:
+        print("\nPorcentagem de audiência por canal:")
+        for canal, pessoas in audiencia.items():
+            porcentagem = (pessoas / total_pessoas) * 100
+            print(f"Canal {canal}: {porcentagem:.2f}%")
+    else:
+        print("Nenhuma audiência registrada.")
+
 
 #27. Crie um programa que calcule e imprima o CR do período para os alunos de
 #computação. Para cada aluno, o algoritmo deverá ler:
@@ -720,6 +816,48 @@ def q23():
 #• fim da entrada de dados é marcada por uma matrícula inválida (matrículas
 #válidas de 1 a 5000);
 #• CR do aluno é igual à média aritmética de suas notas.
+def q27():    
+    melhor_cr = -1
+    total_alunos = 0
+
+    while True:
+        
+        matricula = int(input("Informe o número da matrícula (1 a 5000) ou fora deste intervalo para encerrar: "))
+        
+        
+        if matricula < 1 or matricula > 5000:
+            break
+        
+        qtd_disciplinas = int(input("Informe a quantidade de disciplinas cursadas: "))
+        
+     
+        soma_notas = 0
+        
+        
+        for i in range(qtd_disciplinas):
+            nota = float(input(f"Informe a nota da disciplina {i + 1}: "))
+            soma_notas += nota
+        
+        
+        cr = soma_notas / qtd_disciplinas
+        
+       
+        if qtd_disciplinas >= 5 and cr > melhor_cr:
+            melhor_cr = cr
+        
+       
+        total_alunos += 1
+
+     
+        print(f"Matrícula: {matricula}, CR: {cr:.2f}")
+
+  
+    if melhor_cr >= 0:
+        print(f"\nO melhor CR entre os alunos que cursaram 5 ou mais disciplinas: {melhor_cr:.2f}")
+    else:
+        print("\nNenhum aluno cursou 5 ou mais disciplinas.")
+
+
 
 #28. Construa umprograma que receba a idade, a altura e o peso de várias pessoas,
 #Calcule e imprima:
@@ -728,6 +866,54 @@ def q23():
 #• amédia das alturas das pessoas com idade entre 10 e 20 anos;
 #• a porcentagem de pessoas com peso inferior a 40 quilos entre todas as
 #pessoas analisadas.
+def q28():
+    total_pessoas = 0
+    total_idade_maior_50 = 0
+    total_altura_10_20 = 0
+    soma_altura_10_20 = 0
+    total_peso_inferior_40 = 0
+
+    while True:
+        
+        idade = int(input("Informe a idade (ou um número negativo para encerrar): "))
+        
+        
+        if idade == 0:
+            break
+        
+        altura = float(input("Informe a altura (em metros): "))
+        peso = float(input("Informe o peso (em quilos): "))
+        
+        total_pessoas += 1
+
+        
+        if idade > 50:
+            total_idade_maior_50 += 1
+        
+        if 10 <= idade <= 20:
+            total_altura_10_20 += 1
+            soma_altura_10_20 += altura
+        
+        if peso < 40:
+            total_peso_inferior_40 += 1
+
+   
+    if total_altura_10_20 > 0:
+        media_altura_10_20 = soma_altura_10_20 / total_altura_10_20
+    else:
+        media_altura_10_20 = 0
+
+    
+    if total_pessoas > 0:
+        porcentagem_peso_inferior_40 = (total_peso_inferior_40 / total_pessoas) * 100
+    else:
+        porcentagem_peso_inferior_40 = 0
+
+  
+    print(f"\nQuantidade de pessoas com idade superior a 50 anos: {total_idade_maior_50}")
+    print(f"Média das alturas das pessoas com idade entre 10 e 20 anos: {media_altura_10_20:.2f} metros")
+    print(f"Porcentagem de pessoas com peso inferior a 40 quilos: {porcentagem_peso_inferior_40:.2f}%")
+
 
 #29. Construa um programa que receba o valor e o código de várias mercadorias
 #vendidas em umdeterminado dia. Os códigos obedecem a lista a seguir:
@@ -738,6 +924,42 @@ def q23():
 #• o total vendido naquele dia, com todos os códigos juntos;
 #• o total vendido naquele dia em cada um dos códigos.
 #Obs.: Para encerrar a entrada de dados, digite o valor da mercadoria zero.
+def q29():
+    total_vendido = 0
+    total_limpeza = 0
+    total_alimentacao = 0
+    total_higiene = 0
+
+    while True:
+      
+        valor = float(input("Informe o valor da mercadoria (ou 0 para encerrar): "))
+        
+       
+        if valor == 0:
+            break
+        
+       
+        codigo = input("Informe o código da mercadoria (L-limpeza, A-alimentação, H-higiene): ").upper()
+        
+       
+        if codigo == 'L':
+            total_limpeza += valor
+        elif codigo == 'A':
+            total_alimentacao += valor
+        elif codigo == 'H':
+            total_higiene += valor
+        else:
+            print("Código inválido. Tente novamente.")
+            continue
+        
+        total_vendido += valor
+
+ 
+    print(f"\nTotal vendido no dia: R${total_vendido:.2f}")
+    print(f"Total vendido em produtos de limpeza: R${total_limpeza:.2f}")
+    print(f"Total vendido em produtos de alimentação: R${total_alimentacao:.2f}")
+    print(f"Total vendido em produtos de higiene: R${total_higiene:.2f}")
+
 
 #30. Faça um programa que receba a idade e o estado civil (C-casado, S-solteiro, Vviúvo
 #e D-desquitado ou separado) de várias pessoas. Calcule e imprima:
@@ -747,3 +969,52 @@ def q23():
 #• a porcentagem de pessoas desquitadas ou separadas dentre todas as pessoas
 #analisadas.
 #Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a idade
+def q30():
+    casados = 0
+    solteiros = 0
+    viuvas = 0
+    idade_viuvas = 0
+    desquitados_separados = 0
+    total_pessoas = 0
+
+    while True:
+      
+        idade = int(input("Informe a idade (ou um número negativo para encerrar): "))
+        
+       
+        if idade == 0:
+            break
+        
+        
+        estado_civil = input("Informe o estado civil (C-casado, S-solteiro, V-viúvo, D-desquitado/separado): ").upper()
+        
+       
+        if estado_civil == 'C':
+            casados += 1
+        elif estado_civil == 'S':
+            solteiros += 1
+        elif estado_civil == 'V':
+            viuvas += 1
+            idade_viuvas += idade
+        elif estado_civil == 'D':
+            desquitados_separados += 1
+        
+        total_pessoas += 1
+
+   
+    if viuvas > 0:
+        media_idade_viuvas = idade_viuvas / viuvas
+    else:
+        media_idade_viuvas = 0
+
+   
+    if total_pessoas > 0:
+        porcentagem_desquitados_separados = (desquitados_separados / total_pessoas) * 100
+    else:
+        porcentagem_desquitados_separados = 0
+
+    
+    print(f"Quantidade de pessoas casadas: {casados}")
+    print(f"Quantidade de pessoas solteiras: {solteiros}")
+    print(f"Média das idades das pessoas viúvas: {media_idade_viuvas:.2f}")
+    print(f"Porcentagem de pessoas desquitadas ou separadas: {porcentagem_desquitados_separados:.2f}%")
