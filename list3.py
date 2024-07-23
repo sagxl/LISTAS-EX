@@ -650,15 +650,50 @@ def q22():
 #Para resolver este exercício, consulte a aula 7 que aborda o tratamento de strings,
 #como comparação e atribuição de textos.
 def q23():
-    atleta_mais_alta = 0
-    atleta_masculino_mais_pesado = 0
-    media_idade_atleta = 0
+    contador = 0 
+    soma_idade = 0 
+    maior_altura = 0 
+    mais_pesado = 0
+   
 
-    nome = input('qual e o seu nome ')
-    sexo = int(input('qual o seu sexo (M) ou (F)'))
-    idade = int(input('qual a sua idade '))
-    peso = float(input('digite o seu peso '))
-    altura = int(input('qual a sua altura '))
+    while True: 
+        sexo = ''
+
+        while sex not in 'MF':
+            sexo = str(input('qual o seu sexo (M) (F)')).strip().upper()[0]
+
+
+        
+
+        if nome == '@':
+            break
+            
+        nome = input('digie o seu nome ')
+        idade = int(input('qual a sua idade '))
+        peso = float(input('qual o seu peso '))
+        altura = float(input('qual a sua altura'))
+        
+
+        
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
