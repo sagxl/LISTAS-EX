@@ -650,60 +650,51 @@ def q22():
 #Para resolver este exercício, consulte a aula 7 que aborda o tratamento de strings,
 #como comparação e atribuição de textos.
 def q23():
-    contador = 0 
-    soma_idade = 0 
-    maior_altura = 0 
-    mais_pesado = 0
-   
-
-    while True: 
-        sexo = ''
-
-        while sex not in 'MF':
-            sexo = str(input('qual o seu sexo (M) (F)')).strip().upper()[0]
-
-
+    feminino_mais_alta = None
+    altura_max_feminino = 0.0
+    masculino_mais_pesado = None
+    peso_max_masculino = 0.0
+    soma_idades = 0
+    contador_atletas = 0
+    
+    # Loop para ler informações de múltiplos atletas
+    while True:
+        nome = input("Digite o nome do atleta (ou '@' para sair): ")
         
-
+       
         if nome == '@':
             break
-            
-        nome = input('digie o seu nome ')
-        idade = int(input('qual a sua idade '))
-        peso = float(input('qual o seu peso '))
-        altura = float(input('qual a sua altura'))
         
+        sexo = input("Digite o sexo do atleta (M/F): ")
+        idade = int(input("Digite a idade do atleta: "))
+        peso = float(input("Digite o peso do atleta (kg): "))
+        altura = float(input("Digite a altura do atleta (m): "))
 
         
-
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        soma_idades += idade
+        contador_atletas += 1
+        
+        
+        if sexo == 'F':
+            if altura > altura_max_feminino:
+                altura_max_feminino = altura
+                feminino_mais_alta = nome
+        elif sexo == 'M':
+            if peso > peso_max_masculino:
+                peso_max_masculino = peso
+                masculino_mais_pesado = nome
+        
     
-
+    if contador_atletas > 0:
+        media_idade = soma_idades / contador_atletas
+    else:
+        media_idade = 0
     
-
-
-
-
-
-
+    
+    print(f"\nAtleta feminina mais alta: {feminino_mais_alta} ({altura_max_feminino}m)")
+    print(f"Atleta masculino mais pesado: {masculino_mais_pesado} ({peso_max_masculino}kg)")
+    print(f"Média de idade dos atletas: {media_idade:.1f} anos")
+   
 #24. Faça um programa que calcule quantos litros de gasolina são usados em uma
 #viagem, sabendo que um carro faz 10 km/litro. O usuário fornecerá a velocidade
 #do carro e o período de tempo que viaja nesta velocidade para cada trecho do
