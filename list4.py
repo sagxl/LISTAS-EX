@@ -58,23 +58,39 @@ lista = [1,4,10,2,3,3,4,'maria',True, 24.4]
 
 #dicionaty
  
-clientes = {
-    '65987654':'luis'
-    '65000234''kaka'
-    '65930912':'baba'
-}
+#clientes = {
+  #  '65987654':'luis'
+   # '65000234''kaka'
+    #'65930912':'baba'
+#}
 
 
-print(clientes['65987654'])
+#print(clientes['65987654'])
 #1. Faça um programa que armazene 15 números inteiros em uma lista e depois
 #permita que o usuário digite um número inteiro para ser buscado na lista, se
 #for encontrado o programa deve imprimir a posição desse número na lista, caso
 #contrário, deve imprimir a mensagem: "Nao encontrado!".
+def q01():
+    numeros = []
+
+    for i in range(15):
+        numero = int(input(f"Digite o {i+1}º número inteiro: "))
+        numeros.append(numero)
+
+    numero_busca = int(input("Digite o número inteiro que deseja buscar na lista: "))
+
+    if numero_busca in numeros:
+        posicao = numeros.index(numero_busca)
+        print(f"O número {numero_busca} foi encontrado na posição {posicao}.")
+    else:
+        print("Nao encontrado!")
 
 
 
 #2. Faça um programa que armazene 10 letras em uma lista e imprima uma listagem
 #numerada.
+def q02():
+
 
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
