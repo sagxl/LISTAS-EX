@@ -2,7 +2,7 @@
 Lista de Exercícios referentes a coleções em python
 '''
 #exemplo de coleções.
-lista = [1,4,10,2,3,3,4,'maria',True, 24.4]
+#lista = [1,4,10,2,3,3,4,'maria',True, 24.4]
 
 #print(lista[4])
 #-----------------------------------------
@@ -86,17 +86,102 @@ def q01():
         print("Nao encontrado!")
 
 
+def ex2():
+    listas = []
+
+    for i in range(15):
+        listas.append(random.randrange(100))
+    print(listas)
+    busca = int(input('digite o numer a ser localizado'))
+    try:
+        posicao = listas.index(busca)
+        print(f'posição do numero {busca}:{posicao} ')
+    except ValueError:
+        print('valor não encontrado')
+
+
+
 
 #2. Faça um programa que armazene 10 letras em uma lista e imprima uma listagem
 #numerada.
 def q02():
+    letras = []
+
+    for i in  range (10):
+        letra = int(input(f'digite a{i+1}° letra'))
+        letras.append(letra)
+    
+    print('listagem numerada')
+
+    for idx, letra in enumerate(letras, start=1):
+        print(f"{idx}. {letra}")
+
+def ex3():
+    lista = []
+    i  = 0
+
+    for i in range(10):
+        lista.append(chr(random.randrange(54,91)))
+        print(f'{i}: {lista[i]}')
+        i+=1
+    
+
 
 
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
+def q03():
+    numeros = []
+
+    for i in range(15):
+        numero = int(input ('digite o um numero '))
+        numeros.append(numero)
+    
+    print('listagem numerada')
+
+    for idx,num in enumerate (numeros, start=1):
+        if num % 2 == 0:
+            tipo = "par"
+        else:
+            tipo = "impar"
+        print(f"{idx}. {num} - {tipo}")
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
+def q04():
+    numeros = []
+    
+
+    for i in range(8):
+        numero = int(input(f'digite o {i+1}° numrero '))
+        numeros.append(numero)
+
+    print('numeros digitados na lista ')
+    
+    
+    for num in numeros :
+        print(num)
+
+    multiplos_8 = 0
+
+    for num in numeros:
+        if num % 6 == 0:
+            multiplos_8 += 1
+
+    print(f'{multiplos_8}')
+
+
+    
+
+
+    
+
+
+    
+
+
+
+
 
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
@@ -122,7 +207,9 @@ def q02():
         
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
 #cada um 10 elementos. Ao final o programa deve listar os elementos comuns aos
-#conjuntos.
+#conjuntos.multiplos_de_seis = 0
+   
+
 
 #10. Faça um programa que leia uma lista com 10 elementos e obtenha outra lista resultado
 #cujos valores são os fatoriais da lista original.
