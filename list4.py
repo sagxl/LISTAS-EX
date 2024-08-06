@@ -170,29 +170,42 @@ def q04():
 
     print(f'{multiplos_8}')
 
-
-    
-
-
-    
-
-
-    
-
-
-
-
-
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
+def q05():
+    alunos = []
+
+    for i in range(3):
+        aluno = dict()
+        aluno['nome'] = input('nome: ')
+        aluno ['n1'] = float(input('nota 1: ' ))
+        aluno ['n2'] = float(input('nota 2: ' ))
+        aluno ['media'] = (aluno ['n1'] + aluno['n2'] ) / 2
+        aluno ['situacao'] = 'APROVADO' if aluno ['media']>= 6 else 'REPROVADO'
+
+        alunos.append(aluno)
+    print ('NOME\tN1\tN2\tMEDIA\tSITUACAO')
+
+
+    for a in alunos:
+        print(f"{a['nome']}\t {a['n1']}\t {a['n2']} \t {a['media']}\t {a['situacao']}")
+
+
+
+
 
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
 #necessárias.
+
+
+
+
+
 
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
 #(utilize listas). Ao final, o programa deverá imprimir quantas mercadorias
@@ -218,6 +231,13 @@ def q04():
 
 #11. Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
+
+
+
+
+
+
+
 
 #12. Crie um programa para gerenciar um sistema de reservas de mesas em uma casa
 #de espetáculo. A casa possui 30 mesas de 5 lugares cada. O programa deverá
