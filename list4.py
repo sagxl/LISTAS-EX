@@ -194,18 +194,24 @@ def q05():
         print(f"{a['nome']}\t {a['n1']}\t {a['n2']} \t {a['media']}\t {a['situacao']}")
 
 
-
-
-
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
 #necessárias.
+def q06():
+    salario_atual = []
+    reajuste_salario = []
 
-
-
-
-
+    for i in range(2):
+        salario = float(input(f'digite o salario da {i+1}° pessoa '))
+        salario_atual.append(salario)
+        novo_salario = salario * 1.08
+        reajuste_salario.append(novo_salario)
+    
+    print('\n listahem do salario')
+    print('n° \t salario atual \t reajuste  ')
+    for i in range(2):
+        print(f'{i+1}\t R${salario_atual[i]:.2f}\t R${reajuste_salario[i]:.2f}') 
 
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
 #(utilize listas). Ao final, o programa deverá imprimir quantas mercadorias
@@ -213,11 +219,44 @@ def q05():
 #• lucro < 10%
 #• 10% <= lucro <= 20%
 #• lucro > 20%
+def q07():
+    precos_compra  = []
+    precos_venda = []
+
+    lucro_menor_10 = 0
+    lucro_entre_10_20 = 0
+    lucro_maior_20 = 0
+
+
+    for i in range(100):
+        preco_compra = float(input(f"Digite o preço de compra da mercadoria {i+1}: "))
+        preco_venda = float(input(f"Digite o preço de venda da mercadoria {i+1}: "))
+        precos_compra.append(preco_compra)
+        precos_venda.append(preco_venda)
+
+
+    for i in range(100):
+        lucro = (precos_venda[i] - precos_compra[i]) / precos_compra[i] * 100
+        if lucro < 10:
+            lucro_menor_10 += 1
+        elif 10 <= lucro <= 20:
+            lucro_entre_10_20 += 1
+        else:
+            lucro_maior_20 += 1
+
+    print("\nResultados:")
+    print(f"Mercadorias com lucro menor que 10%: {lucro_menor_10}")
+    print(f"Mercadorias com lucro entre 10% e 20%: {lucro_entre_10_20}")
+    print(f"Mercadorias com lucro maior que 20%: {lucro_maior_20}")
+
+
+
 
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
-        
+
+
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
 #cada um 10 elementos. Ao final o programa deve listar os elementos comuns aos
 #conjuntos.multiplos_de_seis = 0
