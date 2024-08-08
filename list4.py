@@ -255,6 +255,68 @@ def q07():
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
+def q08():
+
+    for i in range(2):
+        codigo = input("digite o codigo:  ")
+        quantidade = int(input("qual a quantidade: "))
+        valor_compra = float(input('qual o valor da compra:  '))
+        valor_venda = float(input('qual o valor da venda: '))
+        codigo_do_produto = {
+
+            'quantidade':quantidade,
+            'valor_compra':valor_compra,
+            'valor_venda':valor_venda
+
+        }
+       
+
+    for i in range(2):
+        opcao = input('escolha uma opcao [1] ou [2]')
+        if opcao == 'q':
+            codigo = input("digite o codigo para buscar :  ")      
+                if  not  codigo_do_produto:
+                    print('codigo não cadastrado')
+                else:
+
+                    print('\ncodigo encontrado com sucesso  ')
+        
+
+                    print(f'codigo do produto : {codigo}')
+                    print(f'quantidade do produto: {quantidade}')
+                    print(f'O valor da compra : R$ {valor_compra}')
+                    print(f'O valor da venda: {valor_venda}')
+        else 
+
+
+        
+        
+
+
+
+
+
+    
+
+       # if not codigo_do_produto:
+        #    print('o codigo do produto não foi encontrado')
+        #else:
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
