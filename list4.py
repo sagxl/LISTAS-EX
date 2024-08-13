@@ -54,6 +54,13 @@ Lista de Exercícios referentes a coleções em python
 #print(a-b)
 #print(a&b)
 #print(a^b)
+def exarquivo():
+    arquivo = open('dad.dat', 'a'+'\n') #dados.data
+    for i in range(2):
+        arquivo.write(input('nome:'))
+    arquivo.close()
+
+
 
 
 #dicionaty
@@ -257,7 +264,7 @@ def q07():
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
 def q08():
 
-    for i in range(2):
+    for i in range(30):
         codigo = input("digite o codigo:  ")
         quantidade = int(input("qual a quantidade: "))
         valor_compra = float(input('qual o valor da compra:  '))
@@ -271,57 +278,31 @@ def q08():
         }
        
 
-    for i in range(2):
+    for i in range(30):
         opcao = input('escolha uma opcao [1] ou [2]')
-        if opcao == 'q':
-            codigo = input("digite o codigo para buscar :  ")      
-                if  not  codigo_do_produto:
-                    print('codigo não cadastrado')
-                else:
-
-                    print('\ncodigo encontrado com sucesso  ')
+        
+        if opcao == '1':
+            codigo = input("digite o codigo para buscar:  ")      
+            if  not  codigo_do_produto:
+                print('codigo não cadastrado')
+            else:
+                print('\n codigo encontrado com sucesso  ')
         
 
-                    print(f'codigo do produto : {codigo}')
-                    print(f'quantidade do produto: {quantidade}')
-                    print(f'O valor da compra : R$ {valor_compra}')
-                    print(f'O valor da venda: {valor_venda}')
-        else 
+                print(f'codigo do produto : {codigo}')
+                print(f'quantidade do produto: {quantidade}')
+                print(f'O valor da compra : R$ {valor_compra}')
+                print(f'O valor da venda: {valor_venda}')
 
-
+        if opcao == '2':
+            print('todo os codigos amarzenado')
+            print(f'{codigo_do_produto}')
         
-        
-
-
-
-
-
-    
-
-       # if not codigo_do_produto:
-        #    print('o codigo do produto não foi encontrado')
-        #else:
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
 #cada um 10 elementos. Ao final o programa deve listar os elementos comuns aos
 #conjuntos.multiplos_de_seis = 0
+
+
    
 
 
@@ -330,13 +311,15 @@ def q08():
 #Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
 
+
 #11. Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
+def q11():
+    lista = []
 
-
-
-
-
+    
+    listas.append(random.randrange(100))
+    print(lista)
 
 
 
