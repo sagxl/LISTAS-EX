@@ -264,52 +264,78 @@ def q07():
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
 def q08():
 
-    for i in range(30):
-        codigo = input("digite o codigo:  ")
-        quantidade = int(input("qual a quantidade: "))
-        valor_compra = float(input('qual o valor da compra:  '))
-        valor_venda = float(input('qual o valor da venda: '))
-        codigo_do_produto = {
+    
+    produtos = {}
 
-            'quantidade':quantidade,
-            'valor_compra':valor_compra,
-            'valor_venda':valor_venda
-
+    
+    for i in range(2):
+        codigo = input("Digite o código: ")
+        quantidade = int(input("Qual a quantidade: "))
+        valor_compra = float(input('Qual o valor da compra: '))
+        valor_venda = float(input('Qual o valor da venda: '))
+    
+        
+        produtos[codigo] = {
+        'quantidade': quantidade,
+        'valor_compra': valor_compra,
+        'valor_venda': valor_venda
         }
-       
 
-    for i in range(30):
-        opcao = input('escolha uma opcao [1] ou [2]')
-        
+    
+    for i in range(2):
+        opcao = input('Escolha uma opção [1] ou [2]: ')
+    
         if opcao == '1':
-            codigo = input("digite o codigo para buscar:  ")      
-            if  not  codigo_do_produto:
-                print('codigo não cadastrado')
+            codigo = input("Digite o código para buscar: ")      
+            if codigo not in produtos:
+                print('Código não cadastrado')
             else:
-                print('\n codigo encontrado com sucesso  ')
-        
+                print('\nCódigo encontrado com sucesso:')
+                print(f'Código do produto: {codigo}')
+                print(f'Quantidade do produto: {produtos[codigo]["quantidade"]}')
+                print(f'O valor da compra: R$ {produtos[codigo]["valor_compra"]}')
+                print(f'O valor da venda: R$ {produtos[codigo]["valor_venda"]}')
 
-                print(f'codigo do produto : {codigo}')
-                print(f'quantidade do produto: {quantidade}')
-                print(f'O valor da compra : R$ {valor_compra}')
-                print(f'O valor da venda: {valor_venda}')
-
-        if opcao == '2':
-            print('todo os codigos amarzenado')
-            print(f'{codigo_do_produto}')
+        elif opcao == '2':
+            print('Todos os códigos armazenados:')
+            for codigo, dados in produtos.items():
+                print(f'Código: {codigo}, Dados: {dados}')
         
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
 #cada um 10 elementos. Ao final o programa deve listar os elementos comuns aos
 #conjuntos.multiplos_de_seis = 0
+def q09():
+    conj1 = []
+    conj2 = []
+
+    print("Digite 10 números inteiros para o primeiro conjunto:")
+    for i in range(3):
+        num = int(input(f"Digite o {i+1}º número: "))
+        conj1.append(num)
+
+    print("\nDigite 10 números inteiros para o segundo conjunto:")
+    for i in range(3):
+        num = int(input(f"Digite o {i+1}º número: "))
+        conj2.append(num)
 
 
-   
+    conj1_set = set(conj1)
+    conj2_set = set(conj2)
 
+    elementos_comun = conj1_set.intersection(conj2_set)
 
+    if elementos_comun :
+        print("\nElementos comuns aos dois conjuntos:")
+        for elem in elementos_comun:
+            print(elem)
+    else:
+        print("\nNão há elementos comuns entre os dois conjuntos.")
 #10. Faça um programa que leia uma lista com 10 elementos e obtenha outra lista resultado
 #cujos valores são os fatoriais da lista original.
 #Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
 #média dos elementos da lista.
+# Leitura da lista original de 10 elementos
+
 
 
 #11. Imprimir o maior e o menor, sem ordenar, o percentual de números pares e a
@@ -367,3 +393,47 @@ def q11():
 
 #20. Faça um programa que leia a matrícula e a média de 100 alunos. Ordene da maior
 #para a menor nota e imprima uma relação contendo todas as matrículas e médias.
+
+
+
+
+# Leitura da lista original de 10 elementos
+lista_original = []
+for i in range(10):
+    num = int(input(f"Digite o {i+1}º número: "))
+    lista_original.append(num)
+
+# Calcular a lista de fatoriais
+lista_fatoriais = []
+for num in lista_original:
+    lista_fatoriais.append(math.factorial(num))
+
+# Encontrar o maior e o menor valor na lista de fatoriais
+maior_fatorial = lista_fatoriais[0]
+menor_fatorial = lista_fatoriais[0]
+for fatorial in lista_fatoriais:
+    if fatorial > maior_fatorial:
+        maior_fatorial = fatorial
+    if fatorial < menor_fatorial:
+        menor_fatorial = fatorial
+
+# Calcular o percentual de números pares na lista original
+quantidade_pares = 0
+for num in lista_original:
+    if num % 2 == 0:
+        quantidade_pares += 1
+percentual_pares_lista = (quantidade_pares / len(lista_original)) * 100
+
+# Calcular a média dos elementos da lista original
+soma = 0
+for num in lista_original:
+    soma += num
+media_lista = soma / len(lista_original)
+
+# Exibir os resultados
+print(f"\nLista original: {lista_original}")
+print(f"Lista de fatoriais: {lista_fatoriais}")
+print(f"Maior valor da lista de fatoriais: {maior_fatorial}")
+print(f"Menor valor da lista de fatoriais: {menor_fatorial}")
+print(f"Percentual de números pares na lista original: {percentual_pares_lista:.2f}%")
+print(f"Média dos elementos da lista original: {media_lista:.2f}")
