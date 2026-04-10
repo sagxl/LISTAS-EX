@@ -2,70 +2,70 @@
 def q01():
 
 
-print('luis eduardo')
+    print('luis eduardo')
 
 #----------------------------------------------------------------------------------------------------------------------------
 
 #2. Faça um programa que imprima o produto dos valores 30 e 27.
 def q02():
-print(30*27)
+    print(30*27)
 
 #----------------------------------------------------------------------------------------------------------------------------
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
 def q03():
-n1 = 6
-n2 = 8
-n3 = 12
-soma = (n1+n2+n3) / 3
-print(f'{soma}')
+    n1 = 6
+    n2 = 8
+    n3 = 12
+    soma = (n1+n2+n3) / 3
+    print(f'{soma}')
 
 #----------------------------------------------------------------------------------------------------------------------------
 
 #4. Faça um programa que leia e imprima um número inteiro.
 def q04():
-numero = int(input('digite um numero:'))
-print(f'{numero}')
+    numero = int(input('digite um numero:'))
+    print(f'{numero}')
 
 #----------------------------------------------------------------------------------------------------------------------------
 
 #5. Faça um programa que leia dois números reais e os imprima.
 def q05():
-nn1 = float(input('digite um primeiro numero:'))
-nn2 = float(input('digite o segundo numero:'))
- 
-print(f'{nn1}\t{nn2}') 
-print(f'{nn1}') 
-print(f'{nn2}') 
+    nn1 = float(input('digite um primeiro numero:'))
+    nn2 = float(input('digite o segundo numero:'))
+    
+    print(f'{nn1}\t{nn2}') 
+    print(f'{nn1}') 
+    print(f'{nn2}') 
 
 #----------------------------------------------------------------------------------------------------------------------------
 
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
 def q06():
-numero1 = int(input('digite um numero inteiro'))
+    numero1 = int(input('digite um numero inteiro'))
 
-antecessor = numero1 - 1
-sucessor = numero1 + 1
+    antecessor = numero1 - 1
+    sucessor = numero1 + 1
 
-print(f'o seu antecessor sera: {antecessor}\t E o sucessor sera : {sucessor}')
+    print(f'o seu antecessor sera: {antecessor}\t E o sucessor sera : {sucessor}')
 
-#ou 
+    #ou 
 
-numero =  int(input('digite um numero inteiro  '))
+    numero =  int(input('digite um numero inteiro  '))
 
-print(f'sucessor : {numero+1}')
-print(f'antecessor: {numero-1}')
+    print(f'sucessor : {numero+1}')
+    print(f'antecessor: {numero-1}')
 #----------------------------------------------------------------------------------------------------------------------------
 
 #7Faça um programa que leia o nome o endereço e o telefone de
 #  um cliente e ao final, imprima esses dados.
 def q07():
-nome = input('digite o seu nome:')
-print(nome)
-endereco = input('digite seu indereço: ') 
-print(endereco)
-telefone = input('disce o seu numero de telefone: ')
-print(telefone)
+    nome = input('digite o seu nome:')
+    print(nome)
+    endereco = input('digite seu indereço: ') 
+    print(endereco)
+    telefone = input('disce o seu numero de telefone: ')
+    print(telefone)
 
 
 
@@ -74,22 +74,22 @@ print(telefone)
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
 def q08():
-numero1 = int(input('digite um numero inteiro:'))
-numero2 = int(input('digite outro numero inteiro: '))
+    numero1 = int(input('digite um numero inteiro:'))
+    numero2 = int(input('digite outro numero inteiro: '))
 
-subtracao = numero1 + numero2
+    subtracao = numero1 + numero2
 
-print(f'o resultado sera {subtracao}')
+    print(f'o resultado sera {subtracao}')
 
 
 #----------------------------------------------------------------------------------------------------------------------------
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
 def q09():
-numero_real = float(input("Digite um número real: "))
-um_quarto = numero_real / 4
+    numero_real = float(input("Digite um número real: "))
+    um_quarto = numero_real / 4
 
-print(f"1/4 de {numero_real} é: {um_quarto}")
+    print(f"1/4 de {numero_real} é: {um_quarto}")
 
 #----------------------------------------------------------------------------------------------------------------------------
 #10. Faça um programa que leia três números reais e calcule a
@@ -97,13 +97,13 @@ print(f"1/4 de {numero_real} é: {um_quarto}")
 #    imprimir o resultado do cálculo.
 def q10():
 
-num_1 = float(input('digite um numero  em real')) 
-num_2 = float(input('digite  numero  em real')) 
-num_3 =float(input('digite  numero  em real')) 
+    num_1 = float(input('digite um numero  em real')) 
+    num_2 = float(input('digite  numero  em real')) 
+    num_3 =float(input('digite  numero  em real')) 
 
-media = (num_1 +num_2+ num_3) / 3
+    media = (num_1 +num_2+ num_3) / 3
 
-print(f'a media sera: {media}')
+    print(f'a media sera: {media}')
  
 #----------------------------------------------------------------------------------------------------------------------------
 
@@ -112,13 +112,13 @@ print(f'a media sera: {media}')
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
 def q11():
-num1 =  float(input('digite um nuemro real  '))
-num2 = float(input('digite um nuemro real '))
+    num1 =  float(input('digite um nuemro real  '))
+    num2 = float(input('digite um nuemro real '))
 
-print (f'{num1} + {num2} = {num1+num2}')
-print (f'{num1} - {num2} = {num1-num2}')
-print (f'{num1} * {num2} = {num1*num2}')
-print (f'{num1} / {num2} = {round ((num1/num2),1)}')
+    print (f'{num1} + {num2} = {num1+num2}')
+    print (f'{num1} - {num2} = {num1-num2}')
+    print (f'{num1} * {num2} = {num1*num2}')
+    print (f'{num1} / {num2} = {round ((num1/num2),1)}')
 
 #----------------------------------------------------------------------------------------------------------------------------
 
@@ -126,11 +126,11 @@ print (f'{num1} / {num2} = {round ((num1/num2),1)}')
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
 def q12():
-numero1 = float(input('digite um numero em real '))
+    numero1 = float(input('digite um numero em real '))
 
-quad = (numero1**2)
+    quad = (numero1**2)
 
-#print(f'o quadradado sera {quad}')
+    #print(f'o quadradado sera {quad}')
 
 
 
@@ -139,21 +139,21 @@ quad = (numero1**2)
 #    imprima o novo saldo, considerando um reajuste de 2%.
 def q13():
 
-saldo = float(input('digite seu saldo'))
-print(f'{saldo*1.02}')
+    saldo = float(input('digite seu saldo'))
+    print(f'{saldo*1.02}')
 
 
 #----------------------------------------------------------------------------------------------------------------------------
 #14. Faça um programa que leia a base e a altura de um retângulo
 #    e imprima o perímetro (base + altura) e a área (base * altura).
 def q14():
-base = int(input('digite a base '))
-altura = int(input('digite a altura  '))
+    base = int(input('digite a base '))
+    altura = int(input('digite a altura  '))
 
-area = base*altura
-perimetro = base + altura
+    area = base*altura
+    perimetro = base + altura
 
-print(f'a base area sera {area}\t e o perimetro sera {perimetro}')
+    print(f'a base area sera {area}\t e o perimetro sera {perimetro}')
 
 #----------------------------------------------------------------------------------------------------------------------------
 #15. Faça um programa que leia o valor de um produto, o percentual
@@ -175,10 +175,10 @@ def q15():
 #    o valor do novo salário.
 #----------------------------------------------------------------------------------------------------------------------------
 def q16():
-salario = float(input('Salário: R$ '))
-reajuste = float(input('Reajuste (%): '))
-novo_salario = salario * (1 + (reajuste / 100))
-print(f'Novo salário: R$ {novo_salario:.2f}') #trunca até a segunda casa
+    salario = float(input('Salário: R$ '))
+    reajuste = float(input('Reajuste (%): '))
+    novo_salario = salario * (1 + (reajuste / 100))
+    print(f'Novo salário: R$ {novo_salario:.2f}') #trunca até a segunda casa
  
  
 #17. Faça um programa que calcule a conversão entre graus centígrados
@@ -188,10 +188,10 @@ print(f'Novo salário: R$ {novo_salario:.2f}') #trunca até a segunda casa
 #    F = (9 x C + 160) / 5
 def q17():
     
-    
-celsius = float(input("Digite a temperatura em graus Celsius: "))
-conversao = fahrenheit = (9 * celsius + 160) / 5
-print(f"{celsius} graus Celsius equivalem a {fahrenheit:.2f} graus Fahrenheit.")
+        
+    celsius = float(input("Digite a temperatura em graus Celsius: "))
+    conversao = fahrenheit = (9 * celsius + 160) / 5
+    print(f"{celsius} graus Celsius equivalem a {fahrenheit:.2f} graus Fahrenheit.")
 
 
 
@@ -208,14 +208,14 @@ print(f"{celsius} graus Celsius equivalem a {fahrenheit:.2f} graus Fahrenheit.")
 #    Ao final, o programa deverá imprimir a distância percorrida e a
 #    quantidade de litros consumidos na viagem.
 def q18():
-tempo = float(input('tempo da viagem(minutos) '))
-velocidade = float(input('velocidade media (km/h)'))
+    tempo = float(input('tempo da viagem(minutos) '))
+    velocidade = float(input('velocidade media (km/h)'))
 
-distancia = tempo/60 * velocidade 
-litros = distancia / 12
+    distancia = tempo/60 * velocidade 
+    litros = distancia / 12
 
-print (f'distancia percorrida :{distancia}km')
-print (f'litros gastos :{litros}-')
+    print (f'distancia percorrida :{distancia}km')
+    print (f'litros gastos :{litros}-')
 
 #19. Faça um programa que calcule o valor de uma prestação em atraso.
 #    Para isso, o programa deve ler o valor da prestação vencida, a
@@ -225,27 +225,27 @@ print (f'litros gastos :{litros}-')
 #    valor da prestação acrescido dos juros. Considere juros simples.
 def q19():
 
-valor_prestacao = float(input("Digite o valor da prestação vencida: "))
-taxa_juros = float(input("Digite a taxa periódica de juros (em porcentagem): "))
-periodo_atraso = int(input("quantidade de dias atrasados : "))
- 
-multa = valor_prestacao * taxa_juros/100 * periodo_atraso 
-valor_final = valor_prestacao * multa 
+    valor_prestacao = float(input("Digite o valor da prestação vencida: "))
+    taxa_juros = float(input("Digite a taxa periódica de juros (em porcentagem): "))
+    periodo_atraso = int(input("quantidade de dias atrasados : "))
+    
+    multa = valor_prestacao * taxa_juros/100 * periodo_atraso 
+    valor_final = valor_prestacao * multa 
 
 
-print(f"Valor da multa R$: R$ {round(multa,2)}")
-print(f"valor a pagar: {round(valor_final)} ")
+    print(f"Valor da multa R$: R$ {round(multa,2)}")
+    print(f"valor a pagar: {round(valor_final)} ")
 
 
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
 #    necessário também ler o valor da cotação do dólar.
 def q20():
-real_dolar = 4.95
-reais = float(input('digite o valor em real '))
+    real_dolar = 4.95
+    reais = float(input('digite o valor em real '))
 
-conversao = reais * real_dolar
-print(f'a valor em dolar sera {conversao} ')
+    conversao = reais * real_dolar
+    print(f'a valor em dolar sera {conversao} ')
 
 
 
